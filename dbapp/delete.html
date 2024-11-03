@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>My First CRUD Project</title> 
+</head> 
+<body> 
+    <h1> Welcome to DJANGO - CRUD Application</h1> 
+    <table> 
+        <tr> 
+            <th>Employee Code</th> 
+            <th>Employee Name</th> 
+            <th>Email Id</th> 
+            <th>Mobile Number</th> 
+ 	<th></th> 
+        </tr> 
+        {% for e in emp %} 
+        <tr> 
+            <td>{{e.empcode}}</td> 
+            <td>{{e.name}}</td> 
+            <td>{{e.email}}</td> 
+            <td>{{e.mobile}}</td> 
+            <td><a href="/insert/{{ e.id }}">Edit</a></td> 
+        </tr> 
+        {% endfor %} 
+    </table> 
+</body> 
+</html> 
